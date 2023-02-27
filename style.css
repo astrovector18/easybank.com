@@ -1,0 +1,475 @@
+
+@import url('https://fonts.cdnfonts.com/css/public-sans');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.head{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 30px rgba(0,0,0,.1);
+  padding:  20px ;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index:999;
+  background-color: #fff;
+}
+.menubar{
+  width: 25px;
+  display: inline;
+  text-align: center;
+  cursor: pointer;
+}
+.bar1, .bar2 , .bar3{
+  width: 100%;
+  height: 1px;
+  margin-top: 5px;
+  background-color: #000;
+  transition: .4s;
+}
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-5px, 1px);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-6px, -6px) ;
+  transform: rotate(45deg)
+  translate(-6px, -6px) ;
+}
+#nav{
+  display: none;
+}
+.head button{
+  display: none;
+}
+main{
+  flex: 1 0 auto;
+  position: relative;
+  text-align: center;
+}
+
+main .hero{
+  width: 100%;
+  height: auto;
+  background-image: url('/images/bg-intro-mobile.svg');
+  background-size: contain;
+  display: block;
+  background-repeat: no-repeat;
+}
+
+.hero img{
+  width: 300px;
+  height: auto;
+  position: relative;
+  top:-60px;
+  right: 8px;
+  margin-left: 10px;
+}
+
+.navlist{
+  width: 250px;
+  margin: 20px auto;
+  box-shadow: 0 3px 150px rgba(0,0,0,.2);
+  text-align: center;
+  display:block;
+  position: fixed;
+  background-color: #FFF;
+  z-index:1;
+  top:50px;
+  left: 35px;
+  right: 35px;
+  height: 0;
+  overflow: hidden;
+  transition:all .1s ease;
+}
+.open{
+  height: 320px;
+}
+.navlist li{
+  list-style: none;
+  margin: 20px 0;
+  padding: 10px;
+}
+.navlist li a{
+  font-family: "Public Sans";
+  text-decoration: none;
+  color:#222;
+  font-weight: 400;
+  padding: 5px;
+}
+.intro{
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  height: 300px;
+}
+
+.intro h1{
+  color:hsl(233, 26%, 24%);
+  font-weight: 400;
+  padding: 10px;
+  line-height: 1;
+  font-family: "Public Sans",Sans-Serif;
+}
+.intro p{
+  padding: 10px;
+  color: hsl(233, 8%, 62%);
+  display: inline-block;
+  font-size: 14px;
+  font-family: "Public sans",Sans-Serif;
+}
+
+.intro button {
+  border: 0;
+  margin-top: 15px;
+  border-radius:25px;
+  padding: 15px 45px;
+  color: #fff;
+  background:linear-gradient(90deg, hsl(136, 65%, 51%),hsl(192, 70%, 51%));
+  outline: none;
+  font-family: "Public Sans",Sans-Serif;
+  font-weight: 700;
+  box-shadow: 0 10px 10px rgba(0,0,0,.06);
+}
+.intro button:hover{
+  opacity:.8;
+}
+.features-container{
+  width: 100%;
+  padding: 20px;
+  background-color: hsl(0, 0%, 98%);
+}
+.features{
+  display: flex;
+  justify-content:center;
+  flex-direction: column;
+  align-items:space-between;
+  width: 100%;
+  padding: 20px;
+  background-color: hsl(0, 0%, 98%);
+}
+.features .content{
+  text-align: center;
+  margin-top:20px;
+ 
+}
+.features-container .intro-content h1{
+  color:hsl(233, 26%, 24%);
+  font-weight: 400;
+  padding: 10px;
+  line-height: 1;
+  font-family: "Public Sans",Sans-Serif;
+  margin-bottom: 10px;
+}
+
+.features-container .intro-content p, .content p{
+  padding: 10px;
+  color: hsl(233, 8%, 62%);
+  display: inline-block;
+  font-size: 14px;
+  font-family: "Public sans",Sans-Serif;
+}
+.content h3{
+  font-weight: 400;
+  margin: 20px;
+  color:hsl(233, 26%, 24%);
+  font-family: "Public Sans";
+}
+
+main h1{
+     color:hsl(233, 26%, 24%);
+  font-weight: 400;
+  padding: 10px;
+  line-height: 1;
+  font-family: "Public Sans",Sans-Serif;
+   margin-bottom: 10px;
+   }
+.articles{
+  width: 100%;
+  padding: 40px;
+  display: flex;
+  text-align: center;
+  flex-direction:column;
+  align-items: center;
+  justify-content: space-between;
+}
+.articles h1{
+  
+}
+.articles .art{
+  min-width: 300px;
+  max-width:30%;
+  height: auto;
+  text-align: start;
+  margin: 10px;
+  box-shadow:0 5px 30px rgba(0,0,0,0.08);
+  overflow: hidden;
+  border-radius: 10px;
+}
+.art > div {
+  margin: 10px;
+  padding: 10px;
+}
+.art > div span{
+  font-size: 10px;
+  font-family: "Public Sans";
+  color:hsl(233, 8%, 62%);
+  margin-bottom: 10px;
+  display: block;
+}
+.art > div h3{
+  font-weight: 400;
+  color:hsl(233, 26%, 24%);
+  font-family: "Public Sans";
+  margin: 10px;
+  font-size: 18px;
+}
+
+.art > div  p{
+  padding: 10px;
+  color: hsl(233, 8%, 62%);
+  display: inline-block;
+  font-size: 12px;
+  font-family: "Public sans",Sans-Serif;
+}
+
+.art > div h3:hover{
+  color: hsl(136, 65%, 51%);
+}
+.art  img{
+  width:100%;
+  height: 200px;
+ 
+}
+/*Footer */
+footer{
+  width: 100%;
+  background-color: hsl(233, 26%, 24%);
+ display: flex;
+ flex-direction: column;
+ justify-content:space-evenly;
+ align-items: center;
+padding: 50px;
+}
+
+
+footer .icons img{
+   color:#fff;
+}
+footer .icons{
+  text-align: center;
+}
+
+#social-icons{
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  width:200px;
+  padding: 15px;
+  justify-content: space-evenly;
+}
+#social-icons i{
+  padding-left:10px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #fff;
+  padding: 10px;
+}
+
+footer ul{
+  text-align: center;
+  margin: 20px 0;
+}
+footer ul li{
+  list-style: none;
+  font-family: "Public sans",Sans-Serif;
+  color:hsl(220, 16%, 96%);
+  font-weight: 400;
+  font-size: 14px;
+  padding: 10px;
+}
+
+footer ul li:hover , #social-icons i:hover{
+  color: hsl(136, 65%, 51%);
+}
+footer .privacy button{
+  border: 0;
+  border-radius:25px;
+  padding: 15px 30px;
+  color: #fff;
+  background:linear-gradient(90deg, hsl(136, 65%, 51%),hsl(192, 70%, 51%));
+  outline: none;
+  font-family: "Public Sans",Sans-Serif;
+  font-weight: 700;
+  box-shadow: 0 10px 10px rgba(255,255,255,.01);
+  margin: 10px 0;
+}
+footer button:hover{
+  opacity:.8;
+}
+
+footer .privacy{
+  text-align: center;
+}
+footer .privacy p{
+  font-family: "Public Sans",Sans-Serif;
+  color: hsl(0, 0%, 98%);
+  font-size: 12px;
+  font-weight: 300;
+  opacity: .5;
+  margin-top: 5px;
+  padding: 10px;
+  word-spacing: 2px;
+}
+footer #show{
+  display: none;
+}
+/*Media Queries*/
+
+@media (min-width:900px){
+  main{
+    overflow-x: hidden;
+  }
+  .head{
+    padding: 20px 100px ;
+  }
+  #nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#nav li{
+  list-style: none;
+  padding: 0 20px;
+  position: relative;
+}
+#nav li a{
+  text-decoration: none;
+  color:hsl(233, 8%, 62%);
+  font-size: 16px;
+  font-family: "Public Sans",Sans-Serif;
+  font-weight:300;
+}
+
+#nav li a:hover,
+#nav li a.active{
+  transition:0.07s ease;
+}
+#nav li a.active::after,
+#nav li a:hover::after{
+  content: "";
+  width:50%;
+  height: 2px;
+  background:hsl(136, 65%, 51%);
+  position: absolute;
+  bottom:-4px;
+  left:20px;
+   }
+   .menubar{
+     display: none;
+   }
+   .head button{
+  display: block;
+  border: 0;
+  border-radius:25px;
+  padding: 15px 30px;
+  color: #fff;
+  background:linear-gradient(90deg, hsl(136, 65%, 51%),hsl(192, 70%, 51%));
+  outline: none;
+  font-family: "Public Sans",Sans-Serif;
+  font-weight: 700;
+  box-shadow: 0 10px 10px rgba(0,0,0,.05);
+   }
+   main .hero{
+     background-image: url('/images/bg-intro-desktop.svg');
+     background-position:400px -100px;
+     background-size:1000px;
+     background-repeat: no-repeat;
+     width: 100%;
+     
+     display: flex;
+     flex-direction: row;
+     justify-content:flex-start;
+     align-items: center;
+     overflow-x: hidden;
+   }
+   .intro{
+     width: 400px;
+     height: auto;
+     text-align: start;
+     margin: 100px 50px;
+   }
+   .intro h1{
+     font-size: 40px;
+   }
+   
+   .hero img{
+     width: 500px;
+     position: absolute;
+     top:-60px;
+     right: -50px;
+   }
+   .features-container .features{
+     display: flex;
+     flex-direction: row;
+     text-align:start;
+     justify-content: space-between;
+   }
+   .features .content{
+     text-align: start;
+   }
+   .features .content img{
+     margin-left: 20px;
+   }
+   .features-container{
+    
+   }
+   
+   .features-container .intro-content{
+     width: 400px;
+     height: auto;
+     margin-left: 30px;
+   }
+   .articles{
+     display: flex;
+     flex-direction: row;
+     justify-content:space-between;
+     align-items:flex-start;
+     flex-wrap:wrap;
+   }
+   .art{
+     margin: 0;
+     width: 500px;
+   }
+   footer{
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: center;
+   }
+   footer ul .hide{
+     display: none;
+   }
+   footer .privacy{
+     text-align: center;
+     padding: 40px;
+    
+   }
+   footer #show{
+     display: block;
+   }
+}
